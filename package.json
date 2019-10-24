@@ -1,0 +1,39 @@
+{
+  "name": "@wenye123/redis-lock",
+  "version": "1.0.0",
+  "description": "简单的redis分布式锁",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "compile": "rm -rf dist && tsc",
+    "prepublish": "npm run compile",
+    "test": "mocha --require ts-node/register test/test-index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenye123/redis-lock.git"
+  },
+  "keywords": [
+    "typescript",
+    "redis-lock",
+    "lock"
+  ],
+  "author": "wenye <wenye2333@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenye123/redis-lock/issues"
+  },
+  "homepage": "https://github.com/wenye123/redis-lock",
+  "devDependencies": {
+    "@types/chai": "^4.2.4",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.12",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  }
+}
