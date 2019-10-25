@@ -26,6 +26,12 @@ export default class {
     return String(Math.random()).split(".")[1];
   }
 
+  private sleep(ms: number): Promise<number> {
+    return new Promise(resolve => {
+      setTimeout(resolve, ms);
+    });
+  }
+
   private initLua() {
     // 释放锁
     this.redis.defineCommand("releaseLock", {
@@ -65,9 +71,9 @@ export default class {
    * 请求一个锁标志
    * @param lockName 锁名字
    * @param acquireTimeout 请求超时毫秒数，默认3000
-   * @param lockTimeout 锁过期毫秒数，默认3000
+   * @param lockTimeout 锁过期毫秒数，默认5000
    */
-  async acquireLock(lockName: string, acquireTimeout: number = 3000, lockTimeout: number = 3000) {
+  async acquireLock(lockName: string, acquireTimeout: number = 3000, lockTimeout: number = 5000) {
     lockName = this.getKeyName(lockName);
     lockTimeout = Math.ceil(lockTimeout); // 超时时间都是整数
     const identifier = this.getIdentifier();
@@ -76,6 +82,7 @@ export default class {
       // 设置锁且包含过期时间
       const ret = await this.redis.set(lockName, identifier, "PX", lockTimeout, "NX");
       if (ret === "OK") return identifier;
+      await this.sleep(20);
     }
     return null;
   }
@@ -102,7 +109,7 @@ export default class {
     const identifier = this.getIdentifier();
     const now = Date.now();
     const ident = await (this.redis as any).acquireSemaphore(sename, now - timeout, limit, now, identifier);
-    return ident;
+    return ident as string | null;
   }
 
   /**

@@ -10,7 +10,8 @@
   "scripts": {
     "compile": "rm -rf dist && tsc",
     "prepublish": "npm run compile",
-    "test": "mocha --require ts-node/register test/test-index.ts"
+    "test": "mocha --require ts-node/register test/test-index.ts",
+    "bench": "ts-node ./benchmark/bench.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/wenye123/redis-lock",
   "devDependencies": {
+    "@leizm/benchmark": "^2.0.1",
     "@types/chai": "^4.2.4",
     "@types/ioredis": "^4.0.18",
     "@types/mocha": "^5.2.7",
@@ -38,6 +40,7 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "ioredis": "^4.14.1"
+    "ioredis": "^4.14.1",
+    "loopbench": "^1.2.0"
   }
 }

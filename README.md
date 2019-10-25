@@ -1,16 +1,14 @@
-# hello
-typescript版本的hello world
+# redis-lock
+
+简单的 redis 分布式锁
 
 ## 安装
+
 ```bash
-npm i -S @wenye123/hello
+npm i -S @wenye123/redis-lock
 ```
 
 ## 使用
+
 ```javascript
-import { hello } from "@wenye123/hello";
-
-const str = hello();
-
-console.log(str); // hello world!
 ```
