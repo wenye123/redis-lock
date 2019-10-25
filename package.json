@@ -1,6 +1,6 @@
 {
   "name": "@wenye123/redis-lock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "简单的redis分布式锁",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
