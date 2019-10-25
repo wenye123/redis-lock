@@ -23,7 +23,9 @@ export default class {
   }
 
   private getIdentifier() {
-    return String(Math.random()).split(".")[1];
+    return Math.random()
+      .toString(16)
+      .split(".")[1];
   }
 
   private sleep(ms: number): Promise<number> {
