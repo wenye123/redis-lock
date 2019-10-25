@@ -11,7 +11,7 @@ npm i -S @wenye123/redis-lock
 ## 使用例子
 
 ```javascript
-import redisLock from "../src/index";
+import redisLock from "@wenye123/redis-lock";
 import Redis from "ioredis";
 
 const redis = new Redis({
