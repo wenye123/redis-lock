@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "rootDir": "src",
     "outDir": "dist",
     "moduleResolution": "node",
     "module": "commonjs",
     "alwaysStrict": true,
     "declaration": true,
+    "sourceMap": false,
     "strict": true,
     "noUnusedLocals": true,
     "esModuleInterop": true

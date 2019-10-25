@@ -1,6 +1,7 @@
 {
   "extends": "../tsconfig",
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "esnext",
     "outDir": "../dist/test",
     "pretty": true

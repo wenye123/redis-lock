@@ -1,8 +1,9 @@
 {
   "extends": "../tsconfig",
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "esnext",
-    "outDir": "../dist/test",
+    "outDir": "../dist/benchmark",
     "pretty": true
   },
   "include": ["../src/**/*.ts", "./**/*.ts"]
