@@ -40,7 +40,6 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "ioredis": "^4.14.1",
-    "loopbench": "^1.2.0"
+    "ioredis": "^4.14.1"
   }
 }
