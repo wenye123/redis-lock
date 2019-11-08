@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "format": "prettier --write \"./**/*.{js,ts,json,yaml}\"",
+    "format": "prettier --write \"./{src,benchmark,test}/**/*.{js,ts,json,yaml}\"",
     "compile": "rm -rf dist && tsc",
     "prepublish": "npm run compile",
     "test": "npm run format && mocha test/test-*.ts",
@@ -37,6 +37,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.0.12",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
@@ -55,9 +56,9 @@
       "src"
     ],
     "reporter": [
-      "html",
       "text",
-      "text-summary"
+      "text-summary",
+      "lcov"
     ],
     "exclude": [
       "**/*.d.ts"

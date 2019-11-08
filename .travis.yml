@@ -1,9 +1,14 @@
 language: node_js
 node_js:
   - 10
-
-script:
-  - npm run test
-
 services:
   - redis-server
+branches:
+  only:
+    - master
+install:
+  - npm install
+script:
+  - npm test
+after_success:
+  - npm run test:cov -- --report lcovonly && cat ./coverage/lcov.info | coveralls

@@ -1,5 +1,7 @@
 # redis-lock
 
+[![Build Status](https://travis-ci.org/wenye123/redis-lock.svg?branch=master)](https://travis-ci.org/wenye123/redis-lock)
+
 简单的 redis 分布式锁
 
 ## 安装
