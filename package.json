@@ -8,9 +8,10 @@
     "dist"
   ],
   "scripts": {
+    "format": "prettier --write \"./**/*.{js,ts,json,yaml}\"",
     "compile": "rm -rf dist && tsc",
     "prepublish": "npm run compile",
-    "test": "mocha test/test-*.ts",
+    "test": "npm run format && mocha test/test-*.ts",
     "test:cov": "export NODE_ENV=test && nyc mocha test/test-*.ts",
     "bench": "ts-node ./benchmark/bench.ts"
   },
@@ -38,6 +39,7 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.2"
   },
