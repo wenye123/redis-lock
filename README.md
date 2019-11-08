@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/wenye123/redis-lock.svg?branch=master)](https://travis-ci.org/wenye123/redis-lock)
 [![Coverage Status](https://coveralls.io/repos/github/wenye123/redis-lock/badge.svg)](https://coveralls.io/github/wenye123/redis-lock)
 [![npm](https://img.shields.io/npm/v/@wenye123/redis-lock)](https://www.npmjs.com/package/@wenye123/redis-lock)
+[![npm](https://img.shields.io/npm/dw/@wenye123/redis-lock)](https://www.npmjs.com/package/@wenye123/redis-lock)
 
 简单的 redis 分布式锁
 
